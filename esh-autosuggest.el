@@ -96,8 +96,7 @@ respectively."
 (defun esh-autosuggest--prefix ()
   "Get current eshell input."
   (let* ((input-start (save-excursion
-                        (eshell-previous-prompt 1)
-                        (eshell-next-prompt 1)
+                        (eshell-next-prompt 0)
                         (point)))
          (prefix
           (string-trim-left
